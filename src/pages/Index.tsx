@@ -7,10 +7,12 @@ import TransformationSection from "@/components/TransformationSection";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { SocialProofNotification } from "@/components/SocialProofNotification";
 
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <SocialProofNotification />
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
