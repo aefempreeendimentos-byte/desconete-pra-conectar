@@ -8,10 +8,12 @@ import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { SocialProofNotification } from "@/components/SocialProofNotification";
+import { UrgencyBanner } from "@/components/UrgencyBanner";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-14 sm:pt-12">
+      <UrgencyBanner />
       <SocialProofNotification />
       <HeroSection />
       <ProblemSection />
