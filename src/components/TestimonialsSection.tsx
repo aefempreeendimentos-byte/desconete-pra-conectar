@@ -74,8 +74,7 @@ const TestimonialsSection = () => {
             O Que Dizem os Pais
           </h2>
           <p className="text-navy/70 max-w-2xl mx-auto">
-            Milhares de famílias já transformaram a alimentação dos seus filhos
-            com nosso método comprovado
+            Milhares de famílias já conseguiram reduzir o tempo de tela dos seus filhos com nosso método comprovado
           </p>
         </div>
 
