@@ -61,7 +61,7 @@ const ProblemSection = () => {
               "O problema <strong>não é falta de autoridade</strong>. 
               É falta de <strong className="text-primary">método</strong>."
             </p>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-4 text-lg md:text-xl font-semibold text-primary">
               E a boa notícia é: existe um caminho mais leve.
             </p>
           </div>
