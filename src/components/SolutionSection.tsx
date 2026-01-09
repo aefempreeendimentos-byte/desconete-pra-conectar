@@ -16,7 +16,7 @@ const SolutionSection = () => {
               <img
                 src={productMockup}
                 alt="Guia Desconecte pra Conectar"
-                className="w-full rounded-3xl shadow-elevated"
+                className="w-full max-w-lg mx-auto lg:max-w-none rounded-3xl shadow-elevated"
               />
             </div>
             <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-sage-light rounded-full blur-2xl -z-10" />
