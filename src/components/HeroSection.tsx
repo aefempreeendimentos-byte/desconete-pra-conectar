@@ -32,7 +32,7 @@ const HeroSection = () => {
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
               Descubra como reduzir o tempo de tela dos seus filhos{" "}
               <strong className="text-foreground">sem gritos, sem culpa e sem radicalismo</strong>.
-              Um método simples para famílias reais.
+              Um método simples, pensado para a rotina real das famílias.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
