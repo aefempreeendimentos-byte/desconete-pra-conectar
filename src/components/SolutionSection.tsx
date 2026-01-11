@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import productMockup from "@/assets/product-mockup.png";
+import productMockup from "@/assets/product-mockup.webp";
 
 const SolutionSection = () => {
   const handleBuyClick = () => {
