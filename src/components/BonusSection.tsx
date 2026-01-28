@@ -1,4 +1,11 @@
+import { Gift, Flame } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 const BonusSection = () => {
+  const handleBuyClick = () => {
+    window.open("https://pay.kiwify.com.br/O4vtZMO", "_blank");
+  };
+
   const bonuses = [
     {
       icon: "🆘",
@@ -26,45 +33,67 @@ const BonusSection = () => {
     }
   ];
 
+  const totalValue = 101;
+
   return (
-    <section className="py-20 lg:py-28 bg-gradient-to-b from-background to-sage-light/30">
+    <section className="py-16 lg:py-24 bg-gradient-to-b from-background to-sage-light/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-medium mb-6">
-            <span className="text-lg">🎁</span>
-            Bônus Exclusivos
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <span className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
+            <Gift className="w-4 h-4" />
+            🎁 BÔNUS EXCLUSIVOS - APENAS HOJE
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Leve muito mais do que <span className="text-gradient">um guia</span>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            Leve Muito Mais do Que <span className="text-gradient">Um Guia</span>
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Materiais extras que sozinhos já valem o investimento
+          <p className="text-lg text-muted-foreground">
+            Materiais extras que sozinhos já valem mais que o investimento total
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
           {bonuses.map((bonus, index) => (
             <div
               key={index}
               className="group relative bg-card p-6 rounded-2xl shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border border-border/50"
             >
-              <div className="absolute -top-3 -right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+              <div className="absolute -top-3 -right-3 bg-destructive text-destructive-foreground px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                <Flame className="w-3 h-3" />
                 {bonus.value}
               </div>
               <span className="text-4xl mb-4 block">{bonus.icon}</span>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+              <h3 className="font-display text-lg font-semibold text-foreground mb-2">
                 {bonus.title}
               </h3>
-              <p className="text-muted-foreground">{bonus.description}</p>
+              <p className="text-muted-foreground text-sm">{bonus.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-xl text-foreground font-medium">
-            Total em bônus: <span className="line-through text-muted-foreground">R$ 101+</span>{" "}
-            <span className="text-primary font-bold">GRÁTIS</span>
-          </p>
+        <div className="text-center space-y-6">
+          <div className="inline-block bg-card px-8 py-4 rounded-2xl shadow-card">
+            <p className="text-lg text-foreground">
+              Total em bônus: <span className="line-through text-muted-foreground">R$ {totalValue}+</span>{" "}
+              <span className="text-primary font-bold text-2xl">GRÁTIS</span>
+            </p>
+          </div>
+
+          <div>
+            <Button variant="hero" size="xl" onClick={handleBuyClick} className="group shadow-glow">
+              QUERO O GUIA + TODOS OS BÔNUS
+              <svg 
+                className="w-5 h-5 transition-transform group-hover:translate-x-1" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Button>
+            <p className="text-sm text-muted-foreground mt-3">
+              Tudo isso por apenas <strong className="text-primary">R$37</strong>
+            </p>
+          </div>
         </div>
       </div>
     </section>
