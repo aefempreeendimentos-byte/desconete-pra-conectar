@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import SocialProofBar from "@/components/SocialProofBar";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import ContentSection from "@/components/ContentSection";
@@ -17,6 +18,7 @@ const Index = () => {
       <UrgencyBanner />
       <SocialProofNotification />
       <HeroSection />
+      <SocialProofBar />
       <ProblemSection />
       <SolutionSection />
       <ContentSection />

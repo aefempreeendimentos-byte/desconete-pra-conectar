@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { Clock, AlertTriangle } from "lucide-react";
+import { Clock, AlertTriangle, Flame } from "lucide-react";
 
 export const UrgencyBanner = () => {
   const [timeLeft, setTimeLeft] = useState({
-    hours: 2,
+    hours: 0,
     minutes: 47,
     seconds: 33,
   });
+
+  const [salesCount] = useState(Math.floor(Math.random() * 15) + 85); // 85-99
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -34,39 +36,44 @@ export const UrgencyBanner = () => {
   const formatNumber = (num: number) => num.toString().padStart(2, "0");
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-coral to-coral-dark text-white py-3 px-4 shadow-lg">
-      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
-        <div className="flex items-center gap-2">
-          <AlertTriangle className="w-5 h-5 animate-pulse" />
-          <span className="font-semibold text-sm sm:text-base">
-            OFERTA ESPECIAL por tempo limitado!
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-destructive via-coral-dark to-destructive text-primary-foreground py-2.5 px-4 shadow-lg">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
+        <div className="flex items-center gap-2 animate-pulse">
+          <Flame className="w-5 h-5" />
+          <span className="font-bold text-sm sm:text-base uppercase tracking-wide">
+            🔥 ÚLTIMAS VAGAS - Preço sobe em:
           </span>
         </div>
         
         <div className="flex items-center gap-2">
           <Clock className="w-4 h-4" />
-          <div className="flex items-center gap-1 font-mono font-bold text-lg">
-            <span className="bg-white/20 rounded px-2 py-0.5">
+          <div className="flex items-center gap-1 font-mono font-black text-xl">
+            <span className="bg-primary-foreground/20 rounded px-2.5 py-1 min-w-[40px]">
               {formatNumber(timeLeft.hours)}
             </span>
-            <span>:</span>
-            <span className="bg-white/20 rounded px-2 py-0.5">
+            <span className="animate-pulse">:</span>
+            <span className="bg-primary-foreground/20 rounded px-2.5 py-1 min-w-[40px]">
               {formatNumber(timeLeft.minutes)}
             </span>
-            <span>:</span>
-            <span className="bg-white/20 rounded px-2 py-0.5">
+            <span className="animate-pulse">:</span>
+            <span className="bg-primary-foreground/20 rounded px-2.5 py-1 min-w-[40px]">
               {formatNumber(timeLeft.seconds)}
             </span>
           </div>
+        </div>
+
+        <div className="hidden md:flex items-center gap-2 text-sm">
+          <AlertTriangle className="w-4 h-4" />
+          <span>{salesCount} pessoas comprando agora</span>
         </div>
 
         <a
           href="https://pay.kiwify.com.br/O4vtZMO"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white text-coral-dark font-bold text-sm px-4 py-1.5 rounded-full hover:bg-cream transition-colors"
+          className="bg-primary-foreground text-coral-dark font-black text-sm px-5 py-2 rounded-full hover:scale-105 transition-transform shadow-lg animate-pulse"
         >
-          GARANTIR AGORA
+          GARANTIR R$37 →
         </a>
       </div>
     </div>
