@@ -73,10 +73,10 @@ const ProblemSection = () => {
           <p className="text-lg font-semibold text-primary mb-6">
             E a boa notícia é: existe um caminho mais leve. ↓
           </p>
-          <Button variant="hero" size="lg" onClick={handleBuyClick} className="group">
+          <Button variant="hero" size="lg" onClick={handleBuyClick} className="group w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-5 h-auto">
             Quero Conhecer o Método
             <svg 
-              className="w-5 h-5 transition-transform group-hover:translate-x-1" 
+              className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" 
               fill="none" 
               viewBox="0 0 24 24" 
               stroke="currentColor"
