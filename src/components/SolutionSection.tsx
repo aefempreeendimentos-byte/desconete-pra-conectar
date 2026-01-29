@@ -54,7 +54,7 @@ const SolutionSection = () => {
               A SOLUÇÃO QUE FUNCIONA
             </span>
 
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               Desconecte pra Conectar:{" "}
               <span className="text-gradient">Menos Tela, Mais Família</span>
             </h2>
@@ -79,10 +79,10 @@ const SolutionSection = () => {
             </div>
 
             <div className="pt-4">
-              <Button variant="hero" size="xl" onClick={handleBuyClick} className="group shadow-glow">
+              <Button variant="hero" size="lg" onClick={handleBuyClick} className="group shadow-glow w-full sm:w-auto text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 h-auto">
                 QUERO ESSE MÉTODO POR R$37
                 <svg 
-                  className="w-5 h-5 transition-transform group-hover:translate-x-1" 
+                  className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" 
                   fill="none" 
                   viewBox="0 0 24 24" 
                   stroke="currentColor"
@@ -90,7 +90,7 @@ const SolutionSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Button>
-              <p className="text-sm text-muted-foreground mt-3">
+              <p className="text-xs sm:text-sm text-muted-foreground mt-3">
                 ✓ Acesso imediato • ✓ Garantia 7 dias • ✓ Bônus exclusivos
               </p>
             </div>

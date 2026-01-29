@@ -88,27 +88,27 @@ const TestimonialsSection = () => {
             <MessageCircle className="w-4 h-4" />
             RESULTADOS COMPROVADOS
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
             Veja o Que Pais <span className="text-gradient">Como Você</span> Dizem
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
             Mais de <strong className="text-foreground">2.500 famílias</strong> já transformaram sua rotina com nosso método
           </p>
         </div>
 
         {/* Stats bar */}
-        <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-12 bg-card p-6 rounded-2xl shadow-card">
+        <div className="grid grid-cols-3 gap-2 sm:gap-4 max-w-2xl mx-auto mb-8 sm:mb-12 bg-card p-4 sm:p-6 rounded-2xl shadow-card">
           <div className="text-center">
-            <p className="font-display text-3xl font-bold text-primary">2.500+</p>
-            <p className="text-sm text-muted-foreground">Famílias</p>
+            <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-primary">2.500+</p>
+            <p className="text-xs sm:text-sm text-muted-foreground">Famílias</p>
           </div>
           <div className="text-center border-x border-border">
-            <p className="font-display text-3xl font-bold text-primary">4.9</p>
-            <p className="text-sm text-muted-foreground">Nota média</p>
+            <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-primary">4.9</p>
+            <p className="text-xs sm:text-sm text-muted-foreground">Nota média</p>
           </div>
           <div className="text-center">
-            <p className="font-display text-3xl font-bold text-primary">98%</p>
-            <p className="text-sm text-muted-foreground">Satisfação</p>
+            <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-primary">98%</p>
+            <p className="text-xs sm:text-sm text-muted-foreground">Satisfação</p>
           </div>
         </div>
 
@@ -163,27 +163,27 @@ const TestimonialsSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-sage/20 text-sage-dark px-6 py-3 rounded-full">
-            <span className="font-bold text-2xl">4.9</span>
+        <div className="mt-8 sm:mt-12 text-center space-y-4 sm:space-y-6">
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 bg-sage/20 text-sage-dark px-4 sm:px-6 py-2 sm:py-3 rounded-full">
+            <span className="font-bold text-xl sm:text-2xl">4.9</span>
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                  className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400"
                 />
               ))}
             </div>
-            <span className="text-foreground ml-2">
-              Baseado em +2.500 avaliações
+            <span className="text-foreground text-sm sm:text-base ml-1 sm:ml-2">
+              +2.500 avaliações
             </span>
           </div>
 
           <div>
-            <Button variant="hero" size="xl" onClick={handleBuyClick} className="group shadow-glow">
+            <Button variant="hero" size="lg" onClick={handleBuyClick} className="group shadow-glow w-full sm:w-auto text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 h-auto">
               QUERO TRANSFORMAR MINHA FAMÍLIA
               <svg 
-                className="w-5 h-5 transition-transform group-hover:translate-x-1" 
+                className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" 
                 fill="none" 
                 viewBox="0 0 24 24" 
                 stroke="currentColor"
@@ -191,7 +191,7 @@ const TestimonialsSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </Button>
-            <p className="text-sm text-muted-foreground mt-3">
+            <p className="text-xs sm:text-sm text-muted-foreground mt-3">
               💳 Pagamento único de R$37 • Acesso vitalício
             </p>
           </div>

@@ -38,7 +38,7 @@ const TransformationSection = () => {
             <Sparkles className="w-4 h-4" />
             ANTES E DEPOIS
           </span>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Imagine sua Rotina <span className="text-gradient">Assim...</span>
           </h2>
         </div>
@@ -49,14 +49,14 @@ const TransformationSection = () => {
             {transformations.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 p-4 bg-card rounded-xl shadow-soft"
+                className="flex items-center gap-2 sm:gap-4 p-3 sm:p-4 bg-card rounded-xl shadow-soft"
               >
-                <div className="flex-1 flex items-center gap-3">
-                  <span className="text-destructive/70 text-sm line-through flex-1">
+                <div className="flex-1 flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-3">
+                  <span className="text-destructive/70 text-xs sm:text-sm line-through flex-1">
                     {item.before}
                   </span>
-                  <ArrowRight className="w-5 h-5 text-accent flex-shrink-0" />
-                  <span className="text-foreground font-semibold flex-1 text-right">
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 rotate-90 sm:rotate-0 self-center" />
+                  <span className="text-foreground font-semibold text-xs sm:text-sm flex-1 sm:text-right">
                     {item.after}
                   </span>
                 </div>
@@ -64,10 +64,10 @@ const TransformationSection = () => {
             ))}
 
             <div className="pt-6 text-center lg:text-left">
-              <Button variant="hero" size="xl" onClick={handleBuyClick} className="group shadow-glow">
+              <Button variant="hero" size="lg" onClick={handleBuyClick} className="group shadow-glow w-full sm:w-auto text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 h-auto">
                 EU QUERO ESSA TRANSFORMAÇÃO
                 <svg 
-                  className="w-5 h-5 transition-transform group-hover:translate-x-1" 
+                  className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" 
                   fill="none" 
                   viewBox="0 0 24 24" 
                   stroke="currentColor"
@@ -75,7 +75,7 @@ const TransformationSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Button>
-              <p className="text-sm text-muted-foreground mt-3">
+              <p className="text-xs sm:text-sm text-muted-foreground mt-3">
                 Por apenas R$37 • Acesso vitalício
               </p>
             </div>

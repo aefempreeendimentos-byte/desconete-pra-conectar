@@ -21,7 +21,7 @@ const CTASection = () => {
               ⚠️ OFERTA EXPIRA EM BREVE
             </div>
             
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
               Chega de Brigar{" "}
               <span className="text-gradient">Por Causa do Celular</span>
             </h2>
@@ -72,32 +72,32 @@ const CTASection = () => {
 
             {/* Pricing */}
             <div className="text-center mb-6">
-              <div className="flex items-center justify-center gap-3 mb-2">
-                <span className="text-xl text-muted-foreground line-through">de R$ 97</span>
-                <span className="bg-destructive/10 text-destructive px-2 py-1 rounded text-sm font-bold">
+              <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2">
+                <span className="text-lg sm:text-xl text-muted-foreground line-through">de R$ 97</span>
+                <span className="bg-destructive/10 text-destructive px-2 py-1 rounded text-xs sm:text-sm font-bold">
                   -62%
                 </span>
               </div>
               <div className="flex items-baseline justify-center gap-1">
-                <span className="text-lg text-muted-foreground">por apenas</span>
-                <span className="font-display text-6xl font-bold text-primary">R$ 37</span>
+                <span className="text-base sm:text-lg text-muted-foreground">por apenas</span>
+                <span className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-primary">R$ 37</span>
               </div>
-              <p className="text-sm text-muted-foreground mt-2">
+              <p className="text-xs sm:text-sm text-muted-foreground mt-2">
                 ou em até 12x de R$ 3,70
               </p>
             </div>
 
             <Button 
               variant="hero" 
-              size="xl" 
+              size="lg" 
               onClick={handleBuyClick}
-              className="w-full group shadow-glow text-xl py-8"
+              className="w-full group shadow-glow text-sm sm:text-base md:text-lg py-5 sm:py-6 md:py-7 h-auto"
             >
               <span className="flex flex-col items-center">
                 <span className="flex items-center gap-2">
                   QUERO TRANSFORMAR MINHA ROTINA
                   <svg 
-                    className="w-6 h-6 transition-transform group-hover:translate-x-1" 
+                    className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-transform group-hover:translate-x-1" 
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor"
@@ -105,7 +105,7 @@ const CTASection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
-                <span className="text-sm opacity-90 mt-1">Acesso imediato após pagamento</span>
+                <span className="text-xs sm:text-sm opacity-90 mt-1">Acesso imediato após pagamento</span>
               </span>
             </Button>
 

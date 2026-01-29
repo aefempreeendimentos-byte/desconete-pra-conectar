@@ -4,8 +4,8 @@ import { Clock, AlertTriangle, Flame } from "lucide-react";
 export const UrgencyBanner = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
-    minutes: 47,
-    seconds: 33,
+    minutes: 23,
+    seconds: 47,
   });
 
   const [salesCount] = useState(Math.floor(Math.random() * 15) + 85); // 85-99
@@ -36,33 +36,33 @@ export const UrgencyBanner = () => {
   const formatNumber = (num: number) => num.toString().padStart(2, "0");
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-destructive via-coral-dark to-destructive text-primary-foreground py-2.5 px-4 shadow-lg">
-      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
-        <div className="flex items-center gap-2 animate-pulse">
-          <Flame className="w-5 h-5" />
-          <span className="font-bold text-sm sm:text-base uppercase tracking-wide">
-            🔥 ÚLTIMAS VAGAS - Preço sobe em:
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-destructive via-coral-dark to-destructive text-primary-foreground py-2 sm:py-2.5 px-2 sm:px-4 shadow-lg">
+      <div className="container mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-4 md:gap-6 text-center">
+        <div className="flex items-center gap-1.5 sm:gap-2 animate-pulse">
+          <Flame className="w-4 h-4 sm:w-5 sm:h-5" />
+          <span className="font-bold text-xs sm:text-sm md:text-base uppercase tracking-wide">
+            🔥 Preço sobe em:
           </span>
         </div>
         
-        <div className="flex items-center gap-2">
-          <Clock className="w-4 h-4" />
-          <div className="flex items-center gap-1 font-mono font-black text-xl">
-            <span className="bg-primary-foreground/20 rounded px-2.5 py-1 min-w-[40px]">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+          <div className="flex items-center gap-0.5 sm:gap-1 font-mono font-black text-base sm:text-lg md:text-xl">
+            <span className="bg-primary-foreground/20 rounded px-1.5 sm:px-2.5 py-0.5 sm:py-1 min-w-[28px] sm:min-w-[40px]">
               {formatNumber(timeLeft.hours)}
             </span>
             <span className="animate-pulse">:</span>
-            <span className="bg-primary-foreground/20 rounded px-2.5 py-1 min-w-[40px]">
+            <span className="bg-primary-foreground/20 rounded px-1.5 sm:px-2.5 py-0.5 sm:py-1 min-w-[28px] sm:min-w-[40px]">
               {formatNumber(timeLeft.minutes)}
             </span>
             <span className="animate-pulse">:</span>
-            <span className="bg-primary-foreground/20 rounded px-2.5 py-1 min-w-[40px]">
+            <span className="bg-primary-foreground/20 rounded px-1.5 sm:px-2.5 py-0.5 sm:py-1 min-w-[28px] sm:min-w-[40px]">
               {formatNumber(timeLeft.seconds)}
             </span>
           </div>
         </div>
 
-        <div className="hidden md:flex items-center gap-2 text-sm">
+        <div className="hidden lg:flex items-center gap-2 text-sm">
           <AlertTriangle className="w-4 h-4" />
           <span>{salesCount} pessoas comprando agora</span>
         </div>
@@ -71,9 +71,9 @@ export const UrgencyBanner = () => {
           href="https://pay.kiwify.com.br/O4vtZMO"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-primary-foreground text-coral-dark font-black text-sm px-5 py-2 rounded-full hover:scale-105 transition-transform shadow-lg animate-pulse"
+          className="bg-primary-foreground text-coral-dark font-black text-xs sm:text-sm px-3 sm:px-5 py-1.5 sm:py-2 rounded-full hover:scale-105 transition-transform shadow-lg animate-pulse"
         >
-          GARANTIR R$37 →
+          R$37 →
         </a>
       </div>
     </div>

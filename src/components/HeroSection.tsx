@@ -25,9 +25,9 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Seu Filho{" "}
-              <span className="text-gradient">Viciado em Telas?</span>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              Cansado de Brigar{" "}
+              <span className="text-gradient">Por Causa das Telas?</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
@@ -57,13 +57,13 @@ const HeroSection = () => {
             <div className="space-y-4">
               <Button 
                 variant="hero" 
-                size="xl" 
+                size="lg" 
                 onClick={handleBuyClick}
-                className="w-full sm:w-auto group shadow-glow animate-pulse-soft"
+                className="w-full sm:w-auto group shadow-glow animate-pulse-soft text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 h-auto"
               >
                 <span className="flex flex-col items-center sm:flex-row sm:gap-2">
                   <span>QUERO RESOLVER ISSO AGORA</span>
-                  <span className="text-sm opacity-90">por apenas R$37</span>
+                  <span className="text-xs sm:text-sm opacity-90">por apenas R$37</span>
                 </span>
               </Button>
 
