@@ -63,34 +63,34 @@ const ExitIntentPopup = () => {
               </DialogTitle>
             </DialogHeader>
 
-            <p className="text-muted-foreground mt-4 mb-6 text-sm sm:text-base">
-              Não deixe a oportunidade escapar! O Guia Desconecte Para Conectar pode transformar a rotina da sua família <strong className="text-foreground">por menos de R$1 por dia</strong>.
+            <p className="text-foreground/90 mt-4 mb-6 text-sm sm:text-base">
+              Não deixe a oportunidade escapar! O Guia Desconecte Para Conectar pode transformar a rotina da sua família <strong className="text-primary font-bold">por menos de R$1 por dia</strong>.
             </p>
 
             {/* Price comparison */}
             <div className="bg-card rounded-xl p-4 mb-6 border border-border">
               <div className="flex items-center justify-center gap-4">
                 <div className="text-center">
-                  <p className="text-sm text-muted-foreground line-through">De R$97</p>
+                  <p className="text-sm text-foreground/70 line-through">De R$97</p>
                   <p className="text-3xl font-bold text-primary">R$37</p>
                 </div>
                 <div className="h-12 w-px bg-border" />
                 <div className="text-left">
-                  <p className="text-sm font-semibold text-foreground">Acesso vitalício</p>
-                  <p className="text-xs text-muted-foreground">+ 4 bônus exclusivos</p>
+                  <p className="text-sm font-bold text-foreground">Acesso vitalício</p>
+                  <p className="text-xs text-foreground/80">+ 4 bônus exclusivos</p>
                 </div>
               </div>
             </div>
 
             {/* Trust badges */}
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-xs text-muted-foreground mb-6">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-xs text-foreground/80 mb-6">
               <div className="flex items-center gap-1">
                 <ShieldCheck className="w-4 h-4 text-accent" />
-                <span>Garantia 7 dias</span>
+                <span className="font-medium">Garantia 7 dias</span>
               </div>
               <div className="flex items-center gap-1">
                 <Clock className="w-4 h-4 text-accent" />
-                <span>Acesso imediato</span>
+                <span className="font-medium">Acesso imediato</span>
               </div>
             </div>
 
@@ -105,7 +105,7 @@ const ExitIntentPopup = () => {
 
             <button
               onClick={handleClose}
-              className="mt-4 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="mt-4 text-sm text-foreground/60 hover:text-foreground transition-colors"
             >
               Não, prefiro perder esta oferta
             </button>
