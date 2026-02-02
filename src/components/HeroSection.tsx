@@ -4,6 +4,23 @@ import { ShieldCheck, Clock, Zap, Users, Star, TrendingUp } from "lucide-react";
 
 const HeroSection = () => {
   const handleBuyClick = () => {
+    // Meta Pixel tracking
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead', {
+        content_name: 'Desconecte pra Conectar',
+        content_category: 'Ebook',
+        value: 37.00,
+        currency: 'BRL'
+      });
+      (window as any).fbq('track', 'InitiateCheckout', {
+        content_name: 'Desconecte pra Conectar',
+        content_ids: ['desconecte-pra-conectar'],
+        content_type: 'product',
+        value: 37.00,
+        currency: 'BRL',
+        num_items: 1
+      });
+    }
     window.open("https://pay.kiwify.com.br/O4vtZMO", "_blank");
   };
 
